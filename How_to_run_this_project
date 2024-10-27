@@ -1,0 +1,19 @@
+#How to run this project?
+Run Front-end:
+PS H:\Project\Travel_Project\Tripify> cd .\client\
+PS H:\Project\Travel_Project\Tripify\client> npm run dev
+
+> client@0.0.0 dev
+> vite
+  VITE v4.4.9  ready in 11172 ms
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h to show help
+
+Start Back-end:
+PS H:\Project\Travel_Project\Tripify\api> nodemon index.js
+[nodemon] 3.0.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node index.js`
