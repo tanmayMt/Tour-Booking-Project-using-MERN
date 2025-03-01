@@ -28,7 +28,8 @@ app.use('/uploads', express.static(__dirname+'/uploads'));//sending photo to htt
 
 app.use(cors({
   credentials: true,
-  origin: 'http://localhost:5173',  //What kind of app should be able to communicate with our API 
+  // origin: 'http://localhost:5173',  //What kind of app should be able to communicate with our API 
+  origin: 'https://client-14kb2pq2r-tanmay-samantas-projects.vercel.app',
   // http://localhost:5173   we van not use this ip->http://127.0.0.1:5173
 }));
 
