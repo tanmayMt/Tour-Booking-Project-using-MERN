@@ -74,6 +74,9 @@ app.get('/test', (req, res) =>{
 });
 //Password->  30112000
 
+app.get("/",(req,res)=>{
+  res.status(<h1>Tour Booking System Server</h1>)
+})
 //Endpoint for register
 app.post('/register',async(req,res)=>{
 //app.post('/api/register', async (req,res) => {
