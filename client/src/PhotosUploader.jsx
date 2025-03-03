@@ -1,5 +1,5 @@
-// import axios from "axios";
-import API from "./axiosConfig"; // Import the configured axios instance
+import axios from "axios";
+// import API from "./axiosConfig"; // Import the configured axios instance
 
 import {useState} from "react";
 // import Image from "./Image.jsx";
@@ -11,7 +11,7 @@ export default function PhotosUploader({addedPhotos,onChange}){
         //We will return the link of the photoes to the api/uploads
         ev.preventDefault(); //stop the reloading
         // 
-        const {data:filename} = await API.post('/upload-by-link', {link: photoLink});   //we are sending photo link state as a link
+        const {data:filename} = await axios.post('/upload-by-link', {link: photoLink});   //we are sending photo link state as a link
         //setAddedPhotos(prev =>{ 
         onChange(prev => {  //
             return [...prev, filename]; //...prev means the array with previous photoes link and 'filename' new photolink
@@ -29,7 +29,7 @@ export default function PhotosUploader({addedPhotos,onChange}){
         for (let i = 0; i < files.length; i++) {
           data.append('photos', files[i]);
         }
-        API.post('/upload', data, {
+        axios.post('/upload', data, {
           headers: {'Content-type':'multipart/form-data'}
         }).then(response => {
           const {data:filenames} = response;
