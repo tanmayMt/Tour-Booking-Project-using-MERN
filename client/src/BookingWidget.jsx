@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 import {differenceInCalendarDays} from "date-fns";
-import axios from "axios";
+// import axios from "axios";
+import API from "./axiosConfig";
 import {Navigate} from "react-router-dom";
 import {UserContext} from "./UserContext.jsx";
 
@@ -26,8 +27,9 @@ export default function BookingWidget({place}) {
   }
 
   async function bookThisPlace() {
-
-    const response = await axios.post('/bookings', {
+    // https://tour-booking-api.onrender.com
+    // const response = await axios.post('/bookings', {
+    const response = await API.post('/bookings', {
       checkIn,checkOut,numberOfGuests,name,phone,
       place:place._id,
       price:numberOfNights * place.price,
