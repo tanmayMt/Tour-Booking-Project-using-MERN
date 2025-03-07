@@ -1,5 +1,5 @@
 // import API from "../axiosConfig"; // Import the configured axios instance
-
+const VITE_API_BASE_URL="https://tour-booking-api.onrender.com";
 import {Link, Navigate} from "react-router-dom";
 import {useContext, useState} from "react";
 import axios from "axios";
@@ -16,7 +16,7 @@ export default function LoginPage(){
     async function handleLoginSubmit(ev) {
       ev.preventDefault();
       try{
-        const res = await axios.post('/login', {email,password});
+        const res = await axios.post(`${VITE_API_BASE_URL}/login`, {email,password});
         // const res = await API.post('/login', {email,password});
         // setUser(data);
         if(res.data.success)
