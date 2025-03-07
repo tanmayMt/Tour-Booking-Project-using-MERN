@@ -2,7 +2,7 @@ import axios from "axios";
 // import API from "./axiosConfig"; // Import the configured axios instance
 
 import {useState} from "react";
-// import Image from "./Image.jsx";
+import Image from "./Image.jsx";
 
 export default function PhotosUploader({addedPhotos,onChange}){
     const [photoLink,setPhotoLink] = useState('');

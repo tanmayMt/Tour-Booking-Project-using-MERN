@@ -1,8 +1,8 @@
-import API from "../axiosConfig"; // Import the configured axios instance
+// import API from "../axiosConfig"; // Import the configured axios instance
 
 import {Link, Navigate} from "react-router-dom";
 import {useContext, useState} from "react";
-// import axios from "axios";
+import axios from "axios";
 import {UserContext} from "../UserContext.jsx";//../UserContext.jsx
 
 export default function LoginPage(){
@@ -16,8 +16,8 @@ export default function LoginPage(){
     async function handleLoginSubmit(ev) {
       ev.preventDefault();
       try{
-        // const res = await axios.post('/login', {email,password});
-        const res = await API.post('/login', {email,password});
+        const res = await axios.post('/login', {email,password});
+        // const res = await API.post('/login', {email,password});
         // setUser(data);
         if(res.data.success)
         {
