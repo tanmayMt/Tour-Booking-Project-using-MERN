@@ -18,7 +18,7 @@ export default function LoginPage(){
       try{
         // const res = await axios.post(`${VITE_API_BASE_URL}/login`, {email,password});
         // const res = await API.post('/login', {email,password});
-        const res = await axios.post(`https://tour-booking-api.onrender.com/login`, {email,password});
+        const res = await axios.post(`/login`, {email,password});
         // setUser(data);
         if(res.data.success)
         {

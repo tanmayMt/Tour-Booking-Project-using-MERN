@@ -10,7 +10,7 @@ export default function PlacesPage() {
 
   const [places,setPlaces] = useState([]);
   useEffect(() => {
-    axios.get('https://tour-booking-api.onrender.com/user-places').then(({data}) => { // 
+    axios.get('/user-places').then(({data}) => { // 
       setPlaces(data);
     });
   }, []);

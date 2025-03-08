@@ -15,7 +15,7 @@ export default function PlacePage() {
     if (!id) {
       return;
     }
-    axios.get(`https://tour-booking-api.onrender.com/places/${id}`).then(response => {  //axios.get(`/places/${id}`).then(response => {     ` ->this is called fancier string
+    axios.get(`/places/${id}`).then(response => {  //axios.get(`/places/${id}`).then(response => {     ` ->this is called fancier string
       setPlace(response.data);
     });
   }, [id]);

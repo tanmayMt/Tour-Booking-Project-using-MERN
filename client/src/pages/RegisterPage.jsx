@@ -17,7 +17,7 @@ export default function RegisterPage(){
         //axios.get("http://localhost:4000/test");
         //axios.get("/test");
         try{
-            await axios.post("https://tour-booking-api.onrender.com/register",{ //About this endpoint(post) we need to define inside index.js //await-> we will wait for user
+            await axios.post("/register",{ //About this endpoint(post) we need to define inside index.js //await-> we will wait for user
                 //The data we want to sent are -->
                 name,
                 email,
