@@ -25,7 +25,7 @@ export default function PlacesFormPage(){
         if (!id) {
           return;
         }
-        axios.get('/places/'+id).then(response => {
+        axios.get('https://tour-booking-api.onrender.com/places/'+id).then(response => {
            const {data} = response;
            setTitle(data.title);
            setAddress(data.address);
@@ -71,13 +71,13 @@ export default function PlacesFormPage(){
         //We want check wheather we want to save places or update the information in save places
         if (id) {
           // update
-          await axios.put('/places', {  // we need to end-point from here
+          await axios.put('https://tour-booking-api.onrender.com/places', {  // we need to end-point from here
             id, ...placeData
           });
           setRedirect(true);
         } else {
           // new place
-          await axios.post('/places', placeData);
+          await axios.post('https://tour-booking-api.onrender.com/places', placeData);
           setRedirect(true);
         }
     

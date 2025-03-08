@@ -19,7 +19,7 @@ export default function ProfilePage(){
     }
 
     async function logout() {
-        await axios.post('/logout');
+        await axios.post('https://tour-booking-api.onrender.com/logout');
         // setUser(null);
         setRedirect('/');
         setUser(null);
